@@ -150,3 +150,31 @@ let {groups: {one, two}} = /^(?<one>.*):(?<two>.*)$/u.exec('foo:bar');
 one  // foo
 two  // bar
 ```
+
+### 尾递归优化技巧，蹦床函数（trampoline）
+
+```javascript
+function trampoline(f) {
+  while (f && f instanceof Function) {
+    f = f();
+  }
+  return f;
+}
+```
+
+上面就是蹦床函数的一个实现，它接受一个函数f作为参数。只要f执行后返回一个函数，就继续执行。注意，这里是返回一个函数，然后执行该函数，而不是函数里面调用函数，这样就避免了递归执行，从而就消除了调用栈过大的问题。
+
+然后，要做的就是将原来的递归函数，改写为每一步返回另一个函数。
+
+```javascript
+function sum(x, y) {
+  if (y > 0) {
+    return sum.bind(null, x + 1, y - 1);
+  } else {
+    return x;
+  }
+}
+```
+
+上面代码中，sum函数的每次执行，都会返回自身的另一个版本。
+现在，使用蹦床函数执行sum，就不会发生调用栈溢出。
