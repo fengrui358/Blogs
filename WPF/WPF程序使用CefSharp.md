@@ -59,3 +59,9 @@ public partial class App : Application
 ```
 
 - 引入 Cef 后程序体积增加 347MB（x64 和 x86 各占一半）
+
+- win7 下要正常使用 Cef 安装 <https://www.microsoft.com/en-us/download/details.aspx?id=48145>
+
+参考 <https://www.shuzhiduo.com/A/n2d9QqgVdD/>
+
+win8 参考 <https://www.shuzhiduo.com/A/1O5ElwVGJ7/>
