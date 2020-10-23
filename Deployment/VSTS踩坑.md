@@ -1,10 +1,10 @@
-﻿# VSTS 踩坑
+﻿# Azure DevOps 踩坑
 
 标签（空格分隔）： 运维
 
 ---
 
-## 让.netCore 2.0 的测试在 VSTS 中正确运行需要注意几个地方
+## 让.netCore 2.0 的测试在 Azure DevOps 中正确运行需要注意几个地方
 
 1. 要增加.netCore 的测试程序集目录；
    ![img](https://images2017.cnblogs.com/blog/282687/201801/282687-20180106102814362-1931048116.png)
@@ -28,7 +28,7 @@
    <PackageLicenseExpression>MIT</PackageLicenseExpression>
 ```
 
-特别是`License`节点，在本地 push 的时候不会出问题，在 Azure Devops 环境下 Push 没有这个会出问题，不能够远程调试。
+特别是`License`节点，在本地 push 的时候不会出问题，在 Azure DevOps 环境下 Push 没有这个会出问题，不能够远程调试。
 
 - 引入`SourceLink`程序集，下面是以代码提交到 GitHub 为例：
 
