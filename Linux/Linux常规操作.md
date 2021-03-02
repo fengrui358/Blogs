@@ -61,7 +61,7 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 ```
 
-配置DNS，配置文件位置是：`/etc/resolv.conf`
+配置 DNS，配置文件位置是：`/etc/resolv.conf`
 
 ```bash
 nameserver 114.114.114.114
@@ -133,7 +133,7 @@ export PATH=$NODE_HOME/bin:$PATH
 
 `curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash`
 
-`sudo yum install  rabbitmq-server.noarch -y`
+`sudo yum install rabbitmq-server.noarch -y`
 
 #### 启动 rabbitmq
 
@@ -204,3 +204,19 @@ firewall-cmd --add-port=5672/tcp --permanent
 firewall-cmd --add-port=15674/tcp --permanent
 firewall-cmd --reload
 ```
+
+### nginx 安装
+
+参考 <https://www.nginx.com/resources/wiki/start/topics/tutorials/install/>
+
+在`/etc/yum.repos.d`目录下添加源文件`nginx.repo`，然后配置源：
+
+```bash
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+```
+
+执行命令安装，`yum install nginx`
