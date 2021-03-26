@@ -220,3 +220,13 @@ enabled=1
 ```
 
 执行命令安装，`yum install nginx`
+
+## 设置常驻服务
+
+### Ubuntu
+
+参考 <https://www.jianshu.com/p/5ffccbd8ed1b>
+
+## 免密登陆
+
+参考 <https://zhuanlan.zhihu.com/p/35878555>
