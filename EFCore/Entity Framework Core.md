@@ -4,6 +4,32 @@
 
 ---
 
+## 教程
+
+<https://docs.microsoft.com/en-us/ef/core/>
+
+## Ef 命令使用
+
+- 使用 EF CLI
+
+安装 `dotnet tool install --global dotnet-ef`
+
+- 使用 PMC (Package Manager Console，Visual Studio 推荐使用该方式，可以减少文件夹切换等操作)
+
+安装 `Install-Package Microsoft.EntityFrameworkCore.Tools`
+
+## 核心 nuget 程序集
+
+- Microsoft.EntityFrameworkCore
+
+- Microsoft.EntityFrameworkCore.Relational
+
+- Microsoft.EntityFrameworkCore._`database provider`_
+
+- Microsoft.EntityFrameworkCore.Design （设计时，用于由 model 生成数据库或者反向， 可以不随生成发布）
+
+程序集的各版本需要一致
+
 ## 自动生成 SQL 的相关命令
 
 | dotnet 命令                                 | PowerShell 命令                   | 作用                                                        |

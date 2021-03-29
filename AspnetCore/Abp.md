@@ -10,6 +10,8 @@
 
 新版 Abp 框架，扩展了对微服务的支持，<https://abp.io/>
 
+结构介绍：<https://docs.abp.io/en/abp/latest/Best-Practices/Module-Architecture>
+
 ## 内置模块
 
 <https://docs.abp.io/en/abp/latest/Modules/Index>
@@ -34,6 +36,8 @@
 ### 实体变更通知
 
 `ILocalEventHandler<EntityChangedEventData<>>`
+
+## 应用层
 
 ## 服务层
 
