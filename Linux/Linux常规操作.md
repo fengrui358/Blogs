@@ -225,8 +225,14 @@ enabled=1
 
 ### Ubuntu
 
-参考 <https://www.jianshu.com/p/5ffccbd8ed1b>
+<https://www.jianshu.com/p/5ffccbd8ed1b>
+
+<https://blog.csdn.net/wojiaosha123/article/details/98784936>
 
 ## 免密登陆
 
 参考 <https://zhuanlan.zhihu.com/p/35878555>
+
+<https://docs.github.com/cn/github/authenticating-to-github/working-with-ssh-key-passphrases>
+
+Windows 下添加ssh-agent <https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement>

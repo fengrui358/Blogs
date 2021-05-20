@@ -22,6 +22,10 @@
 
 <https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations>
 
+### IRepository 内置方法
+
+<https://docs.abp.io/en/abp/latest/Repositories>
+
 ### 异步查询执行
 
 `IAsyncQueryableExecuter.ToListAsync()`
@@ -56,3 +60,7 @@
 <https://docs.abp.io/en/abp/latest/Configuration>
 
 <https://docs.abp.io/en/abp/latest/Settings>
+
+## 参考文章
+
+<https://www.cnblogs.com/myzony/p/11312928.html>

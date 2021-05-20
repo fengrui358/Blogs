@@ -41,4 +41,3 @@
 | dotnet ef migrations script                 | Script-Migration                  | 将当前的 Migrationn 生成 SQL 脚本，SQL 脚本可以直接拿来使用 |
 
 **使用命令前需要引用`Microsoft.EntityFrameworkCore.Tools`这个包**
-**还要在`.csproj`文件中手动添加`<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />`，不知道这是不是这个版本的一个 Bug**
