@@ -4,6 +4,14 @@
 
 ---
 
+## 账号权限
+
+创建 docker 组 `sudo groupadd docker`
+
+添加用户到该组 `sudo usermod -aG docker ${USER}`
+
+重新登陆系统
+
 ## 建立网络
 
 ```Docker
@@ -32,8 +40,12 @@ docker run -d -P --rm --name web --mount type=bind,source=D:\src\webapp12345free
 - `--rm` 容器停止后自动删除容器
 - `--name` 指定容器别名
 
-## 常用 Docker run
+## 常用 Docker 镜像
 
 ### postgres
 
 ```docker run -d --name er-db --rm -e POSTGRES_PASSWORD=1234 -v /home/free/datadir:/var/lib/postgresql/data -p 25435:5432 postgres:alpine```
+
+### rabbitmq
+
+```docker run -d --name er-mq --network er-network --rm -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_VHOST=er -e RABBITMQ_DEFAULT_USER=eruser -e RABBITMQ_DEFAULT_PASS=abc123 rabbitmq:management```
