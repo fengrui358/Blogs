@@ -49,3 +49,20 @@ docker run -d -P --rm --name web --mount type=bind,source=D:\src\webapp12345free
 ### rabbitmq
 
 ```docker run -d --name er-mq --network er-network --rm -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_VHOST=er -e RABBITMQ_DEFAULT_USER=eruser -e RABBITMQ_DEFAULT_PASS=abc123 rabbitmq:management```
+
+### Docker Ui Mananger
+
+#### portainer
+
+<https://www.portainer.io/>
+
+```bash
+docker volume create portainer_data
+docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
+
+#### Seagull
+
+```bash
+docker run -d -p 10086:10086 -v /var/run/docker.sock:/var/run/docker.sock tobegit3hub/seagull
+```
